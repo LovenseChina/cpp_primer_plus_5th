@@ -1,0 +1,24 @@
+#include<iostream>
+const int ArSize = 8;
+int sum_arr(int *begin, int *end);
+int main() {
+    int cookies[ArSize] = {1, 2, 4, 8, 16, 32, 64, 128};
+    std::cout << cookies << " = array address, ";
+    std::cout << sizeof(cookies) << " = size of cookies array\n";
+    int sum = sum_arr(cookies, cookies + ArSize);
+    std::cout << "Total cookies eaten: " << sum << std::endl;
+    sum = sum_arr(cookies, cookies + 3);
+    std::cout << "First three eaters ate " << sum << " cookies.\n";
+    sum = sum_arr(cookies + 4, cookies + ArSize);
+    std::cout << "Last four eaters ate " << sum << " cookies.\n";
+    return 0;
+}
+
+int sum_arr(int *begin, int *end) {
+    int total = 0;
+    std::cout << begin << " = arr address, ";
+    std::cout << sizeof begin << " = size of arr\n";
+    for (int *p = begin; p != end; ++p)
+        total += *p;
+    return total;
+}
