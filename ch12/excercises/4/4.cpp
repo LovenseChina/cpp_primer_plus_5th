@@ -49,5 +49,6 @@ int main() {
 			return 1;
 		}
 	}
+	cout << "All check clear!\n";
 	return 0;
 }
