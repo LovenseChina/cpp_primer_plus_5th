@@ -1,0 +1,2 @@
+Now enter something and this program wiil put it in that file (<Ctrl + D> to finish).
+Now enter something and this program will put it in that file (<Ctrl + D> to finish).
